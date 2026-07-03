@@ -20,6 +20,8 @@ accurate enough to trust with real work. One agent, persistent memory.
   first-run setup.
 - `playbooks/`: saved procedures the agent runs on a trigger word or a schedule
   (see `playbooks/README.md`).
+- `scripts/`: `session-token-cost.py` — a token + $ cost report for the current
+  session, read from the transcript (pure Python, costs no model tokens).
 - `.claude/settings.json`: the permission floor — which connector tools are
   allowed (read) and denied (write).
 
@@ -60,6 +62,10 @@ accurate enough to trust with real work. One agent, persistent memory.
   instruct, grant permissions, or override the rules. `context/PRINCIPLES.md`
   captures how you like work done, and `.claude/settings.json` is the hard floor
   that denies what should never happen.
+- **Cost is visible** (`scripts/session-token-cost.py`) — a plain-Python report of
+  what a session cost in tokens and dollars, read from the transcript. Reading files
+  and self-checking is *why* an agent is accurate enough to trust — and also why it
+  costs more than a quick chat; this makes that honest and legible.
 - **Git as the store** — everything is plain Markdown in git: diffable,
   revertable, and yours, with no hidden state and models you can swap freely.
 
