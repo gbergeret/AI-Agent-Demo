@@ -10,7 +10,11 @@ accurate enough to trust with real work. One agent, persistent memory.
 
 ## What is in here
 - `CLAUDE.md`: the startup routine the agent reads on every session.
-- `MEMORY.md`: what the agent has learned, updated in place as it goes.
+- `MEMORY.md`: what the agent has learned, updated in place as it goes — with a
+  one-line pointer to each active project.
+- `projects/`: active work, one folder per project (`PROJECT.md` + `LOG.md`), so
+  memory stays lean — opened only when a task needs it. Copy `projects/_TEMPLATE/`
+  to start one; `projects/INDEX.md` maps them.
 - `context/`: loaded on demand via `context/INDEX.md`. `VOICE.md` (how to write)
   and `PROFILE.md` (who you are: what you do, where you live), filled in by the
   first-run setup.
@@ -32,6 +36,11 @@ accurate enough to trust with real work. One agent, persistent memory.
 - **Written context, loaded on demand** (`context/` + `context/INDEX.md`) — who
   you are (`PROFILE.md`) and how to write (`VOICE.md`), pulled in only when a
   task needs them rather than all at once.
+- **Projects — memory that doesn't bloat** (`projects/`) — active work lives one
+  folder per project (`PROJECT.md` + `LOG.md`); `MEMORY.md` keeps just a one-line
+  pointer, and the folder is opened only when the task needs it. Open → run →
+  harvest durable learnings back to memory → archive. The same load-on-demand
+  principle as `context/INDEX.md`, applied to work in flight.
 - **The startup routine** (`CLAUDE.md`) — the first thing read every session; it
   says what to load and how to behave.
 - **Playbooks** (`playbooks/`) — saved procedures with a trigger: some run on a
