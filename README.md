@@ -48,7 +48,9 @@ accurate enough to trust with real work. One agent, persistent memory.
 - **Playbooks** (`playbooks/`) — saved procedures with a trigger: some run on a
   word (the first-run welcome wizard, plus `save` and `reload`), and some run on a
   **schedule** — the daily summary, a read-only morning briefing built from your
-  Google Calendar.
+  Google Calendar. New ones follow `playbooks/_TEMPLATE.md` (Cadence, Scope, Steps,
+  Rules, End-of-run report, Done-when) — the answer to a recurring request can *be*
+  a playbook.
 - **First-run onboarding** — the welcome wizard interviews you once, writes your
   answers into `PROFILE.md` / `VOICE.md`, then removes itself.
 - **Connectors, read-only first** (`.claude/settings.json`) — real tools are
