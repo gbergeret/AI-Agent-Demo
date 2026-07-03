@@ -15,9 +15,9 @@ accurate enough to trust with real work. One agent, persistent memory.
 - `projects/`: active work, one folder per project (`PROJECT.md` + `LOG.md`), so
   memory stays lean — opened only when a task needs it. Copy `projects/_TEMPLATE/`
   to start one; `projects/INDEX.md` maps them.
-- `context/`: loaded on demand via `context/INDEX.md`. `VOICE.md` (how to write)
-  and `PROFILE.md` (who you are: what you do, where you live), filled in by the
-  first-run setup.
+- `context/`: loaded on demand via `context/INDEX.md`. `VOICE.md` (how to write),
+  `PROFILE.md` (who you are: what you do, where you live) — both filled in by the
+  first-run setup — and `PRINCIPLES.md` (how you like work done).
 - `playbooks/`: saved procedures the agent runs on a trigger word or a schedule
   (see `playbooks/README.md`).
 - `scripts/`: `session-token-cost.py` — a token + $ cost report for the current
