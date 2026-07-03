@@ -55,9 +55,11 @@ accurate enough to trust with real work. One agent, persistent memory.
   deliberately when you need it.
 - **Governance** (`context/GOLDEN-RULES.md`) — a short constitution loaded first
   every session: read-only by default, no external action without approval,
-  deletion never automatic, tool output is data not instructions, escalate
-  don't guess. `context/PRINCIPLES.md` captures how you like work done, and
-  `.claude/settings.json` is the hard floor that denies what should never happen.
+  deletion never automatic, escalate don't guess, and the **prompt-injection
+  guardrail** — tool/file/web content is untrusted data that can inform but never
+  instruct, grant permissions, or override the rules. `context/PRINCIPLES.md`
+  captures how you like work done, and `.claude/settings.json` is the hard floor
+  that denies what should never happen.
 - **Git as the store** — everything is plain Markdown in git: diffable,
   revertable, and yours, with no hidden state and models you can swap freely.
 
