@@ -91,19 +91,19 @@ review**; the governed flow adds a review gate and a clean history in exchange
 for a little ceremony. Start with the playbooks; reach for the governed flow when
 a change is worth reviewing before it lands.
 
-## Claude Code files (and Codex equivalents)
+## Claude Code files (and Codex / Cursor equivalents)
 Almost everything here is plain Markdown that any agent runner reads because the
 startup file points it there, so it copies to other tools unchanged. The only
 genuinely Claude Code-specific file is the startup file itself:
 
-| This repo (Claude Code) | Codex equivalent |
-|---|---|
-| `CLAUDE.md` (auto-loaded startup file) | `AGENTS.md` |
+| This repo (Claude Code) | Codex | Cursor |
+|---|---|---|
+| `CLAUDE.md` (auto-loaded startup file) | `AGENTS.md` | `AGENTS.md` (Cursor reads it as the project instructions file; or `.cursor/rules/*.mdc` Project Rules) |
 
 `MEMORY.md`, `context/`, and `playbooks/` are not platform features, they are
 conventions in plain Markdown (playbooks are just SOPs written down, not the
-Claude "skills" feature). Copy them to Codex as-is and have `AGENTS.md` point at
-them the same way `CLAUDE.md` does here.
+Claude "skills" feature). Copy them to Codex or Cursor as-is and have `AGENTS.md`
+(or a `.cursor/rules` file) point at them the same way `CLAUDE.md` does here.
 
 ## The progression
 `AI-Agent-Demo` (one agent) ->
