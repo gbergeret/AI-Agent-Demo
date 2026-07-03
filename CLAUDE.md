@@ -10,7 +10,9 @@ onboards you, then deletes itself, so this happens only once.
 ## Load on every session
 1. `context/GOLDEN-RULES.md`: the constitution. Read it first; it overrides
    everything here.
-2. `MEMORY.md`: what you have learned and the work in flight.
+2. `MEMORY.md`: what you have learned and the work in flight. Active work lives in
+   `projects/` (one folder per project; see `projects/README.md`), so memory holds
+   only a one-line pointer — open a project's folder only when the task needs it.
 3. `context/INDEX.md`: the map of context. Load the context files a task needs
    from there (for example `context/VOICE.md` to write, `context/PROFILE.md` to
    recall who the user is), rather than loading everything every time.
