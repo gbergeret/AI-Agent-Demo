@@ -40,9 +40,9 @@ are done, write the answers to the files and show what you saved.
   needed once it has run.
 - Clean up `CLAUDE.md`: remove the "## First run: the welcome wizard" section, so
   nothing points at the deleted playbook.
-- Open a pull request with all of these changes together (the filled-in profile,
-  the voice, the removed wizard, and the cleaned-up `CLAUDE.md`). The PR is the
-  record of your onboarding.
-- Confirm in one line: "I have opened a PR with your details and removed the
-  setup wizard. Review and merge it and you are set. You can change any of this
-  any time."
+- Offer to save: suggest running the "save to main" playbook
+  (`001-save-to-main.md`) to back up all of these changes together (the filled-in
+  profile, the voice, the removed wizard, and the cleaned-up `CLAUDE.md`) to `main`
+  in one step.
+- Confirm in one line: "You are all set up. Say **save** whenever you want to back
+  up your changes to `main`. You can change any of this any time."

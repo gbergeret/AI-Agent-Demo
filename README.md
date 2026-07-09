@@ -26,11 +26,26 @@ accurate enough to trust with real work. One agent, persistent memory.
   allowed (read) and denied (write).
 
 ## How to start
-1. Fork or clone this repo.
-2. Open it in Claude Code.
-3. Say **"Hi"** to kick off. On the first run that triggers a quick setup (the
-   welcome wizard); after that it reads your memory and context and gets to work,
-   and updates `MEMORY.md` whenever you correct it so it remembers next time.
+> **Do not fork.** Forks of a public repo are forced public, but your copy will hold
+> personal memory that must stay private. Fork only for a throwaway public showcase,
+> with nothing personal in it.
+
+1. **Create your own git repo, and make sure it is private.** This is the one that
+   matters most: the repo fills up with your personal memory and context, so it must
+   not be public.
+2. **Open a Claude Code session in your new, empty private repo** (a remote web
+   session works well).
+3. **Paste this prompt:**
+   ```text
+   Copy everything from https://github.com/gbergeret/AI-Agent-Demo into this repo and
+   push it all to main in a single commit messaged "Copied from gbergeret/AI-Agent-Demo".
+   Then read CLAUDE.md and run the welcome wizard (playbooks/000-welcome-wizard.md) to
+   set me up.
+   ```
+4. **Save your setup:** say **"save"** to run the save-to-main playbook. (Advanced:
+   open a pull request instead, for a reviewed change, see the governed flow below.)
+5. **You're all set** with your own personalised agent: it reads your memory and
+   context each session, and updates `MEMORY.md` whenever you correct it.
 
 ## Concepts in this repo
 - **Written memory** (`MEMORY.md`) — the agent records what it learns and reads
