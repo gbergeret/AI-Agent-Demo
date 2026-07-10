@@ -49,6 +49,10 @@ accurate enough to trust with real work. One agent, persistent memory.
    playbook.
 5. **You are set.** From here it reads your memory and context, gets to work, and
    updates `MEMORY.md` whenever you correct it so it remembers next time.
+6. **Stay up to date.** Later, when this demo gains new features, say "update from
+   upstream" to pull the latest template improvements into your copy, safely (your
+   memory, profile, and projects are never touched). See
+   `playbooks/001-update-from-upstream.md`.
 
 ## Concepts in this repo
 - **Written memory** (`MEMORY.md`) — the agent records what it learns and reads
@@ -64,7 +68,8 @@ accurate enough to trust with real work. One agent, persistent memory.
 - **The startup routine** (`CLAUDE.md`) — the first thing read every session; it
   says what to load and how to behave.
 - **Playbooks** (`playbooks/`) — saved procedures with a trigger: some run on a
-  word (the first-run welcome wizard, plus `save` and `reload`), and some run on a
+  word (the first-run welcome wizard, plus `save`, `reload`, and `update from
+  upstream`), and some run on a
   **schedule** — the daily summary, a read-only morning briefing built from your
   Google Calendar. New ones follow `playbooks/_TEMPLATE.md` (Cadence, Scope, Steps,
   Rules, End-of-run report, Done-when) — the answer to a recurring request can *be*
@@ -103,7 +108,7 @@ anything — memory, context, or the rules themselves — is a real git flow:
 This is the apex of "git as the store": every change is proposed, reviewed, and
 reversible, with a full audit trail. It is also an **advanced** workflow — so for
 everyday use we hide it behind the `save` and `reload` playbooks
-(`001-save-to-main`, `002-rebase-from-main`), which commit straight to `main` in
+(`002-save-to-main`, `003-rebase-from-main`), which commit straight to `main` in
 one step. The trade-off is deliberate: the playbooks are simple but have **no
 review**; the governed flow adds a review gate and a clean history in exchange
 for a little ceremony. Start with the playbooks; reach for the governed flow when
